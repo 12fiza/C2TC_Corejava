@@ -2,12 +2,12 @@ package object_classes;
 
 import java.util.Scanner;
 
-class Library {
+public class Library {
 	int acc_num;
 	String Title;
 	String Author;
 	Scanner sc =new Scanner(System.in);
-	void input()
+	public void input()
 	{
 		System.out.println("the author of the book");
 		System.out.println(" ");
@@ -20,7 +20,7 @@ class Library {
 		
 				
 	}
-	void compute()
+	public void compute()
 	{
 	System.out.println("enter the number of days late");
 	int a=sc.nextInt();
@@ -28,7 +28,7 @@ class Library {
 	System.out.println("total fine amount:"+fine);
 	
 	}
-	 void display()
+	 public void display()
 	{
 		System.out.println("Accession Number\t Title\t \t \t Author\n");
 		System.out.println(+acc_num +"\t\t\t"+Title+"\t\t\t"+Author+"\t");
