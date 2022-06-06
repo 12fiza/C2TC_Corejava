@@ -1,7 +1,7 @@
 package Static;  
 
-public class finalvariable extends A {
-    final int speedlimit=90;//final variable
+public class finalvariable{
+     int speedlimit=90;//final variable
 	void run() {
 		speedlimit=400;
 	}
