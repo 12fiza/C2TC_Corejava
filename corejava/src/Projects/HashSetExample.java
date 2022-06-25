@@ -25,6 +25,15 @@ public class HashSetExample {
 		while(itr.hasNext()) {
 			System.out.println(itr.next());
 		}
+		set.remove("Spring");
+		System.out.println(set);
+		System.out.println("the size of set is="+set.size());	
+		System.out.println("Is the set is Empty?  ---"+set.isEmpty());
+		System.out.println("Does the string 'java' prisent in the set? ---"+set.contains("java"));
+		System.out.println(set.toArray());
+
+
+		
 
 	}
 
