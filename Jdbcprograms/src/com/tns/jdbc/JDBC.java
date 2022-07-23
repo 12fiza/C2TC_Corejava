@@ -17,7 +17,7 @@ Class.forName("com.mysql.cj.jdbc.Driver");   //class loader
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fiza","root", "Fizathahareen@412");     //create connection
 			
 			Statement st = con.createStatement();   //The object used for executing a static SQL statement and returning the results it produces. 
-			String query1 = "insert into emp1 values(3,'Aishu')";  //Inserting new data in table by using  query1
+			String query1 = "insert into emp1 values(7,'aishu')";  //Inserting new data in table by using  query1
 			String query= "select * from emp1";                   
 			ResultSet rs = st.executeQuery("SELECT * from emp1");   //A table of data representing a database result set
 			while(rs.next())

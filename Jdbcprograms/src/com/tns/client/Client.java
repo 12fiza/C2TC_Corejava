@@ -1,9 +1,12 @@
 package com.tns.client;
+
 import java.sql.Connection;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import com.tns.util.DBUtil;
+import java.sql.ResultSet;
 
 public class Client {
 	public static void main(String[] args) throws SQLException {
@@ -15,6 +18,8 @@ public class Client {
 			System.out.println("JDBC: Connection is established");
 		}
 		
+		
+		addEmployee();
 		GetEmployee();
 	}
 		//Create Operation
@@ -22,7 +27,7 @@ public class Client {
 		{
 			Connection connection =DBUtil.getconnection();
 			Statement stmt = connection.createStatement();
-			String sqlinsert = "insert into emp1(name,salary,bonus)" + "values('Nandhini',3000.00,70.00)";
+			String sqlinsert = "insert into fiza.employee(id,name,salary,bonus)" + "values(6,'fiza',400,80)";
 			int executeupdate = stmt.executeUpdate(sqlinsert);
 			if(executeupdate==1) {
 				System.out.println("Entry is added");
@@ -55,7 +60,7 @@ public class Client {
 		private static void GetEmployee() throws SQLException {
 			Connection connection =DBUtil.getconnection();
 			Statement stmt = connection.createStatement();
-			String sqlretrieve="Select * from emp1";
+			String sqlretrieve="Select * from fiza.employee";
 			ResultSet rs = stmt.executeQuery(sqlretrieve);
 			while(rs.next()) {
 				int id = rs.getInt("id");
@@ -75,7 +80,7 @@ public class Client {
 		if(rs.next()) {
 			int id = rs.getInt("id");
 			String name = rs.getString("name");
-			Double salary = rs.getDouble("Salary");
+			Double salary = rs.getDouble("salary");
 			Double bonus = rs.getDouble("bonus");
 			System.out.println(id + " " + name + " "+ salary +" "+ bonus);
 		}

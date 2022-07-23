@@ -8,7 +8,7 @@ public class DBUtil {
 	private static final String db_driverclass="com.mysql.cj.jdbc.Driver";
 	private static final String db_username="root";
 	private static final String db_password="Fizathahareen@412";
-	private static final String db_url="jdbc:mysql://localhost:3306/jdbcdb";
+	private static final String db_url="jdbc:mysql://localhost:3306/fiza";
 	private static Connection con;
 	
 	static {
